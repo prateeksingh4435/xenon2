@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 def index(request):
-    messages.success(request,'logout successfully')
+   
     return render(request,'index.html')
 
 def about(request):
@@ -94,6 +94,6 @@ def afterlogin(request):
 
 def logoutpage(request):
     logout(request)
-    messages.error(request,'logout successfully')
+    messages.success(request,'logout successfully')
     
     return redirect('index')
